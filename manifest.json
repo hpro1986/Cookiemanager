@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "KTeam",
+  "version": "1.0.0",
+  "description": "Get/add cookie.",
+  "permissions": ["cookies", "storage", "tabs", "activeTab"],
+  "host_permissions": [
+	"<all_urls>"
+  ],
+  "icons": {
+  "128": "icons/logo.png"
+  },
+  "action": {
+    "default_title": "Cookie Panel",
+    "default_popup": "popup.html",
+	"default_icon": "icons/logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

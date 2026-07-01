@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Import</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Cookie Import</p>
+          <h1>Thêm cookie</h1>
+          <p class="subline" id="siteLine">Site hiện tại: chưa xác định</p>
+        </div>
+        <div class="badge" id="domainBadge">KTeam</div>
+      </section>
+
+      <section class="panel">
+        <label class="label" for="cookieInput">Chuỗi cookie</label>
+        <textarea
+          id="cookieInput"
+          spellcheck="false"
+          placeholder="c_user=value1;xs=value2;fr=value3...."
+        ></textarea>
+
+        <div class="field-grid">
+          <label>
+            <span class="label">Domain</span>
+            <input id="domainInput" type="text" value="facebook.com" />
+          </label>
+          <label>
+            <span class="label">Path</span>
+            <input id="pathInput" type="text" value="/" />
+          </label>
+        </div>
+
+        <div class="field-grid">
+          <label>
+            <span class="label">Hết hạn</span>
+            <select id="expiryInput">
+              <option value="session">Phiên hiện tại</option>
+              <option value="1h" selected>1 giờ</option>
+              <option value="1d">1 ngày</option>
+            </select>
+          </label>
+          <label class="checkline">
+            <input id="subdomainInput" type="checkbox" />
+            <span>Áp dụng cho subdomain</span>
+          </label>
+        </div>
+
+        <p class="note">Cập nhật 02/07/2026.</p>
+
+        <div class="actions">
+          <button class="primary" id="getCookieBtn" type="button">Get Cookie</button>
+          <button class="secondary" id="copyBtn" type="button">Copy Cookie</button>
+          <button class="primary" id="applyBtn" type="button">Add Cookie</button>
+        </div>
+
+        <div class="status" id="statusBox">Chưa có thao tác nào.</div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
